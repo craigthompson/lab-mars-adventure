@@ -15,10 +15,10 @@ alert("They need someone to go to Mars this weekend, and YOU'VE been chosen!");
 let excited = prompt("Are you excited? (Type Y or N)");
 let validInputReceived;
 while (!validInputReceived) {
-  if (excited.toUpperCase() === "Y") {
+  if (excited.toUpperCase().trim().startsWith("Y")) {
     alert("I knew you’d say that. It’s so cool that you’re going to Mars!");
     validInputReceived = true;
-  } else if (excited.toUpperCase() === "N") {
+  } else if (excited.toUpperCase().trim().startsWith("N")) {
     alert("Well, it’s too late to back out now.");
     validInputReceived = true;
   } else {
@@ -28,17 +28,21 @@ while (!validInputReceived) {
   }
 }
 
+while (true) {
+  //do something
+  break;
+}
+
 // Prompt user for number of suitcases to bring
 alert("It's time to pack for your trip to Mars.");
 let numSuitcases = prompt("How many suitcases do you plan to bring?");
-let validSuitcaseNumberReceived;
-while (!validSuitcaseNumberReceived) {
+while (true) {
   if (Number(numSuitcases) > 2) {
     alert("That’s way too many. You’ll have to pack more lightly.");
-    validSuitcaseNumberReceived = true;
+    break;
   } else if (Number(numSuitcases) <= 2) {
     alert("Perfect. You’ll certainly fit in the spaceship!");
-    validSuitcaseNumberReceived = true;
+    break;
   } else {
     numSuitcases = prompt(
       `"${numSuitcases}" is not a valid number of suitcases. Please, try answering again. \nHow many suitcases do you plan to bring?`
