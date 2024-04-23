@@ -26,20 +26,31 @@
 //   }
 // }
 
-//Prompt user for number of suitcases to bring
-alert("It's time to pack for your trip to Mars.");
-let numSuitcases = prompt("How many suitcases do you plan to bring?");
-let validSuitcaseNumberReceived;
-while (!validSuitcaseNumberReceived) {
-  if (Number(numSuitcases) > 2) {
-    alert("That’s way too many. You’ll have to pack more lightly.");
-    validSuitcaseNumberReceived = true;
-  } else if (Number(numSuitcases) <= 2) {
-    alert("Perfect. You’ll certainly fit in the spaceship!");
-    validSuitcaseNumberReceived = true;
-  } else {
-    numSuitcases = prompt(
-      `"${numSuitcases}" is not a valid number of suitcases. Please, try answering again. \nHow many suitcases do you plan to bring?`
-    );
-  }
-}
+// //Prompt user for number of suitcases to bring
+// alert("It's time to pack for your trip to Mars.");
+// let numSuitcases = prompt("How many suitcases do you plan to bring?");
+// let validSuitcaseNumberReceived;
+// while (!validSuitcaseNumberReceived) {
+//   if (Number(numSuitcases) > 2) {
+//     alert("That’s way too many. You’ll have to pack more lightly.");
+//     validSuitcaseNumberReceived = true;
+//   } else if (Number(numSuitcases) <= 2) {
+//     alert("Perfect. You’ll certainly fit in the spaceship!");
+//     validSuitcaseNumberReceived = true;
+//   } else {
+//     numSuitcases = prompt(
+//       `"${numSuitcases}" is not a valid number of suitcases. Please, try answering again. \nHow many suitcases do you plan to bring?`
+//     );
+//   }
+// }
+
+// Prompt user to choose companion animal
+alert("You're allowed to bring one companion animal with you.");
+const companionType = prompt(
+  "What kind of companion animal would you like to bring?"
+);
+let companionName = prompt("What is your companion's name?");
+const firstLetter = companionName[0].toUpperCase();
+const otherLetters = companionName.slice(1).toLowerCase();
+companionName = firstLetter + otherLetters;
+alert(`Cool, so you're bringing ${companionName} the ${companionType}.`);
